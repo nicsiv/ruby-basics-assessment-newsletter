@@ -28,6 +28,7 @@ ARTICLES = [
 #########################
 
 def calculate_recipients
+  puts SUBSCRIBERS
   # Using the SUBSCRIBERS and UNSUBSCRIBED arrays,
   # write a method that will return an array of only the subscribers who haven't unsubscribed
 end
@@ -36,7 +37,9 @@ def first_n_articles(number_of_articles)
   ARTICLES.first(number_of_articles)
 end
 
-def print_recipients
+def print_recipients(emails)
+  emails = calculate_recipients
+  calculate_recipients.join(",")
   # Write a method that uses the output of calculate_recipients
   # and returns a list of emails separated by commas
   # Ex) "abc@email.com, def@email.com, ghi@email.com"
